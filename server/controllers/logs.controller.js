@@ -1,8 +1,12 @@
 import Log from "../models/Log.js";
 
+export const verLogs = async (req, res) => {
+  const logs = await Log.find();
+  res.send(logs);
+  return 0;
+};
 
-
-export const guardarLog = async(Usuario, Accion, Descripcion) => {
+export const guardarLog = async (Usuario, Accion, Descripcion) => {
   if (!Usuario) {
     return;
   }
@@ -12,11 +16,11 @@ export const guardarLog = async(Usuario, Accion, Descripcion) => {
   if (!Descripcion) {
     return;
   }
-  const newLog= Log({
+  const newLog = Log({
     Usuario,
     Accion,
-    Descripcion
+    Descripcion,
   });
-  await newLog.save()
+  await newLog.save();
   return;
 };
