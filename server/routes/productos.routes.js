@@ -13,7 +13,7 @@ router.get(`${BaseUrlProductos}/:id`,obtenerProductoPorId)
 
 router.put(`${BaseUrlProductos}/:id`,actualizarProductoPorId)
 
-router.delete(`${BaseUrlProductos}/:id`,eliminarProductoPorId)
+router.post(`${BaseUrlProductos}/eliminar/:id`,eliminarProductoPorId)
 
 router.put(`${BaseUrlProductos}/retirar/:id`,retirarCantidadDeProductoPorId)
 
