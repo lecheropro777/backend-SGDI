@@ -12,7 +12,7 @@ const app = express();
 const dev = process.env.URLDEV;
 const produccion = process.env.URLPROD;
 
-app.use(cors({ origin: dev, credentials: true }));
+app.use(cors({ origin: produccion, credentials: true }));
 app.use(express.json());
 app.use(cookieParser());
 
